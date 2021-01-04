@@ -1,0 +1,130 @@
+header {
+  height: 50px;
+}
+header .container {
+  height: 100%;
+}
+header .container .logo {
+  width: 90%;
+}
+header .container div.logo a {
+  font-size: 14px;
+  text-indent: 16px;
+  display: block;
+}
+header .container .menu {
+  display: none;
+}
+header .container .icon {
+  width: 10%;
+  margin-right: 5px;
+}
+header .container .icon .wrap {
+  display: flex;
+}
+slider {
+  /* width: 100%; */
+  max-height: 180px;
+}
+slider div.container-slider {
+  width: 100%;
+}
+slider .container-slider div.slide-item img {
+  width: 100%;
+  max-height: 180px;
+}
+slider .container-slider .slide-item h2 {
+  left: 10%;
+  font-size: 15px;
+  letter-spacing: 2px;
+  top: 20%;
+}
+slider .container-slider .slide-item h2 span {
+  margin-bottom: -15px;
+}
+best-seller {
+  margin-top: 0px;
+}
+best-seller ul {
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+}
+best-seller ul li {
+  width: 45%;
+}
+best-seller ul li:first-child {
+  width: 100%;
+}
+
+shipping {
+  margin-top: 20px;
+}
+shipping ul {
+  flex-wrap: wrap;
+}
+shipping ul li {
+  width: 50%;
+}
+
+promotion ul {
+  flex-direction: column;
+}
+promotion ul li {
+  width: 100%;
+}
+
+product-feature {
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+product-feature ul li {
+  width: 45%;
+  margin: auto;
+}
+
+footer div.one {
+  flex-wrap: wrap;
+}
+footer div.one .discount {
+  width: 100%;
+}
+footer div.one .discount h3 {
+  margin-top: 35px;
+  font-size: 23px;
+}
+footer div.one .discount p {
+  padding: 0px 30px 15px 30px;
+}
+footer div.one .branding {
+  width: 100%;
+  flex-wrap: wrap;
+  height: 300px;
+}
+footer div.one .branding span {
+  width: 50%;
+}
+footer div.one .branding span.brand1 {
+  background-position: 30px 0px;
+}
+footer div.one .branding span.brand2 {
+  background-position: -200px 0px;
+}
+footer div.one .branding span.brand3 {
+  background-position: -435px 0px;
+}
+footer div.one .branding span.brand4 {
+  background-position: -665px 0px;
+}
+footer div.copyright {
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+footer div.copyright p {
+  width: 100%;
+  line-height: 30px;
+  /* display: block; */
+}
+footer div.copyright div.social {
+  width: 100%;
+}

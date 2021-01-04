@@ -1,0 +1,434 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  max-width: 1280px;
+  margin: 0px auto;
+}
+a {
+  text-decoration: none;
+}
+/* START HEADER */
+header {
+  width: 100%;
+  height: 100px;
+}
+header .container {
+  display: flex;
+  height: 100px;
+  align-items: center;
+}
+header .container .logo {
+  width: 35%;
+}
+header .container .logo a {
+  color: #3cb878;
+  font-size: 22px;
+  /* font-weight: bold; */
+  /* Viet hoa */
+  text-transform: uppercase;
+}
+header .container .menu {
+  width: 45%;
+}
+header .container .menu ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+header .container .menu ul li {
+  /* Cho cac the li ngang hang nhau */
+  display: inline-block;
+}
+header .container .menu ul li a {
+  text-transform: uppercase;
+  color: #646a72;
+  padding: 0px 10px 0px 10px;
+}
+header .container .menu ul li a.active {
+  color: #3cb878;
+}
+header .container .menu ul li a:hover {
+  color: #3cb878;
+}
+header .container .icon {
+  width: 20%;
+}
+header .container .icon .wrap {
+  float: right;
+}
+header .container .icon .wrap span {
+  background: url(../images/cat-icon.png) no-repeat;
+  display: block;
+  width: 17px;
+  height: 17px;
+  float: left;
+  margin-left: 20px;
+}
+header .container .icon .wrap span.cart {
+  background-position: 2;
+  position: relative;
+  cursor: pointer;
+}
+header .container .icon .wrap span.cart small {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: #3cb878;
+  color: #fff;
+  border-radius: 50%;
+  line-height: 20px;
+  text-align: center;
+  top: -13px;
+  right: -13px;
+}
+header .container .icon .wrap span.search {
+  background-position: -45px;
+  cursor: pointer;
+}
+header .container .icon .wrap span.more {
+  background-position: -90px;
+  cursor: pointer;
+}
+/* Start Slider */
+slider {
+  width: 100%;
+  display: block;
+  height: 570px;
+  position: relative;
+}
+slider .container-slider {
+  width: 100%;
+}
+slider .slide-item {
+  /* Neu slide co nhieu anh, thi anh se ngang nhau */
+  position: absolute;
+}
+slider .slide-item img {
+  max-width: 100%;
+  height: auto;
+}
+slider .slide-item h2 {
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-size: 32px;
+  line-height: 32px;
+  position: absolute;
+  top: 40%;
+  left: 15%;
+}
+slider .slide-item h2 span {
+  display: block;
+  margin-bottom: 25px;
+}
+slider .slide-item h2 small {
+  color: #3cb878;
+  display: block;
+  padding-top: 8px;
+}
+/* Start Best seller */
+best-seller {
+  display: block;
+  width: 100%;
+  margin-top: 40px;
+}
+best-seller ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  display: flex;
+}
+best-seller ul li {
+  width: 20%;
+  /* min-height: 200px; */
+  margin-left: 15px;
+  position: relative;
+}
+best-seller ul li img {
+  max-width: 250px;
+  max-width: 100%;
+}
+best-seller ul li img:hover {
+  cursor: pointer;
+}
+best-seller ul li a {
+  color: #646a72;
+  font-size: 14px;
+}
+best-seller ul li > p {
+  color: #3cb878;
+}
+best-seller ul li:first-child {
+  display: flex;
+  align-items: center;
+}
+best-seller ul li:first-child div h3 {
+  text-transform: uppercase;
+  display: block;
+}
+best-seller ul li:first-child div small {
+  font-size: 14px;
+  font-style: italic;
+  font-weight: normal;
+  color: #3cb878;
+}
+best-seller ul li:first-child p {
+  color: #646a72;
+  font-size: 12px;
+  padding-top: 10px;
+}
+best-seller ul li:hover .action {
+  display: block;
+}
+best-seller ul li .action {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: none;
+}
+best-seller ul li .action a {
+  display: block;
+  background: url(../images/share.png) no-repeat top;
+  width: 27px;
+  height: 31px;
+  margin-bottom: 5px;
+  background-position: -7px -3px;
+}
+best-seller ul li .action a.heart {
+  background-position: -7px;
+}
+best-seller ul li .action a.compare {
+  background-position: -7px -105px;
+}
+
+/* Shipping */
+
+shipping {
+  display: block;
+  width: 100%;
+  background: #f5f6f9;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+shipping ul {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  list-style-type: none;
+}
+shipping ul li {
+  width: 25%;
+  /* align-items: center; cai nay chi dung trong flex */
+  text-align: center;
+}
+shipping ul li h3 {
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 3px 0px 5px 0px;
+}
+shipping ul li p {
+  font-size: 12px;
+  color: #646a72;
+}
+
+/* Start promotion */
+
+promotion {
+  display: block;
+  width: 100%;
+  background: #2e3348;
+}
+promotion ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  display: flex;
+}
+promotion ul li {
+  width: 33.333%;
+  text-align: center;
+  padding: 20px;
+}
+promotion ul li.active {
+  background: #34394f;
+}
+promotion ul li img {
+  max-width: 100%;
+  /* width: 350px; */
+}
+
+/* Start product-feature */
+
+product-feature {
+  display: block;
+  width: 100%;
+  margin-top: 80px;
+  /* padding-bottom: 50px; */
+}
+product-feature h3 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+}
+product-feature small {
+  color: #3cb878;
+  font-size: 12px;
+  font-style: italic;
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+}
+product-feature ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+product-feature ul li {
+  /* width: 20%; */
+  max-width: 230px;
+  min-height: 200px;
+  margin-right: 15px;
+  margin-bottom: 50px;
+}
+product-feature ul li:hover {
+  cursor: pointer;
+}
+product-feature ul li a {
+  color: #646a72;
+  font-size: 14px;
+  padding-top: 15px;
+}
+product-feature ul li p {
+  color: #3cb878;
+  padding-top: 5px;
+}
+product-feature ul li img {
+  /* max-width: 200px; */
+  max-width: 100%;
+  flex-grow: 1;
+}
+
+/* Start Footer */
+
+footer {
+  width: 100%;
+  display: block;
+}
+footer div.one {
+  display: flex;
+}
+footer div.discount {
+  width: 50%;
+  min-height: 200px;
+  background: url(../images/discount-bg.png) no-repeat;
+  text-align: center;
+  /* padding: 30px; */
+  color: #fff;
+}
+footer div.discount h3 {
+  font-size: 25px;
+  margin-top: 55px;
+  margin-bottom: 15px;
+}
+footer div.discount p {
+  padding: 0px 100px 15px 100px;
+  font-size: 13px;
+}
+footer div.discount div.form {
+  display: flex;
+  justify-content: center;
+}
+footer div.discount div.form input {
+  width: 200px;
+  padding: 7px;
+  margin-right: 5px;
+}
+footer div.discount div.form button {
+  background-color: #3cb878;
+  padding: 5px;
+  width: 150px;
+  color: #fff;
+  border: none;
+}
+footer div.branding {
+  width: 50%;
+  min-height: 200px;
+  background-color: #f5f6f9;
+  display: flex;
+  justify-content: center;
+}
+footer div.branding span {
+  width: 23%;
+  background: url(../images/branding.png) no-repeat;
+}
+footer div.branding span.brand1 {
+  background-position: 15px 45px;
+}
+footer div.branding span.brand2 {
+  background-position: -225px 45px;
+}
+footer div.branding span.brand3 {
+  background-position: -460px 45px;
+}
+footer div.branding span.brand4 {
+  background-position: -700px 45px;
+}
+
+footer div.copyright {
+  display: flex;
+  height: 45px;
+  background: #000000;
+}
+footer div.copyright p {
+  width: 50%;
+  color: #727272;
+  text-align: center;
+  line-height: 45px;
+  font-size: small;
+}
+footer div.copyright div.social {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+footer div.copyright div.social a {
+  display: block;
+  background: url(../images/social.png) no-repeat;
+  width: 45px;
+  max-height: 45px;
+  margin-left: 5px;
+}
+footer div.copyright div.social a.one {
+  background-position: 0px 10px;
+}
+footer div.copyright div.social a.two {
+  background-position: -60px 10px;
+}
+footer div.copyright div.social a.three {
+  background-position: -120px 10px;
+}
+footer div.copyright div.social a.four {
+  background-position: -180px 10px;
+}
+footer div.copyright div.social a.five {
+  background-position: -240px 10px;
+}
+.modal {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  z-index: 9999;
+  background-color: red;
+}
