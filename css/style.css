@@ -9,7 +9,7 @@ body {
 }
 .container {
   max-width: 1280px;
-  margin: 0px auto;
+  margin: 0 auto;
 }
 a {
   text-decoration: none;
@@ -17,11 +17,11 @@ a {
 /* START HEADER */
 header {
   width: 100%;
-  height: 100px;
+  height: 80px;
 }
 header .container {
   display: flex;
-  height: 100px;
+  height: 80px;
   align-items: center;
 }
 header .container .logo {
@@ -30,26 +30,24 @@ header .container .logo {
 header .container .logo a {
   color: #3cb878;
   font-size: 22px;
-  /* font-weight: bold; */
-  /* Viet hoa */
+  font-weight: bold;
   text-transform: uppercase;
 }
 header .container .menu {
   width: 45%;
 }
 header .container .menu ul {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   list-style-type: none;
 }
 header .container .menu ul li {
-  /* Cho cac the li ngang hang nhau */
   display: inline-block;
 }
 header .container .menu ul li a {
   text-transform: uppercase;
   color: #646a72;
-  padding: 0px 10px 0px 10px;
+  padding: 0 10px;
 }
 header .container .menu ul li a.active {
   color: #3cb878;
@@ -72,7 +70,7 @@ header .container .icon .wrap span {
   margin-left: 20px;
 }
 header .container .icon .wrap span.cart {
-  background-position: 2;
+  background-position: 2px;
   position: relative;
   cursor: pointer;
 }
@@ -94,6 +92,7 @@ header .container .icon .wrap span.search {
   cursor: pointer;
 }
 header .container .icon .wrap span.more {
+  display: none;
   background-position: -90px;
   cursor: pointer;
 }
@@ -140,19 +139,19 @@ best-seller {
   margin-top: 40px;
 }
 best-seller ul {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   list-style-type: none;
   display: flex;
 }
 best-seller ul li {
   width: 20%;
-  /* min-height: 200px; */
-  margin-left: 15px;
+  margin-top: 10px;
+  margin-left: 13px;
   position: relative;
 }
 best-seller ul li img {
-  max-width: 250px;
+  /*max-width: 250px;*/
   max-width: 100%;
 }
 best-seller ul li img:hover {
@@ -171,6 +170,7 @@ best-seller ul li:first-child {
 }
 best-seller ul li:first-child div h3 {
   text-transform: uppercase;
+  font-size: 20px;
   display: block;
 }
 best-seller ul li:first-child div small {
@@ -181,7 +181,7 @@ best-seller ul li:first-child div small {
 }
 best-seller ul li:first-child p {
   color: #646a72;
-  font-size: 12px;
+  font-size: 13px;
   padding-top: 10px;
 }
 best-seller ul li:hover .action {
@@ -189,17 +189,16 @@ best-seller ul li:hover .action {
 }
 best-seller ul li .action {
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
   display: none;
 }
 best-seller ul li .action a {
   display: block;
-  background: url(../images/share.png) no-repeat top;
   width: 27px;
   height: 31px;
   margin-bottom: 5px;
-  background-position: -7px -3px;
+  background: url(../images/share.png) no-repeat -7px -3px;
 }
 best-seller ul li .action a.heart {
   background-position: -7px;
@@ -215,25 +214,25 @@ shipping {
   width: 100%;
   background: #f5f6f9;
   margin-top: 40px;
-  margin-bottom: 20px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  margin-bottom: 15px;
+  padding: 20px 0;
 }
 shipping ul {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
   list-style-type: none;
 }
 shipping ul li {
   width: 25%;
-  /* align-items: center; cai nay chi dung trong flex */
   text-align: center;
 }
 shipping ul li h3 {
   text-transform: uppercase;
   font-size: 13px;
-  padding: 3px 0px 5px 0px;
+  padding: 3px 0 5px 0;
 }
 shipping ul li p {
   font-size: 12px;
@@ -248,8 +247,8 @@ promotion {
   background: #2e3348;
 }
 promotion ul {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   list-style-type: none;
   display: flex;
 }
@@ -343,7 +342,7 @@ footer div.discount h3 {
   margin-bottom: 15px;
 }
 footer div.discount p {
-  padding: 0px 100px 15px 100px;
+  padding: 0 100px 15px 100px;
   font-size: 13px;
 }
 footer div.discount div.form {
@@ -431,4 +430,13 @@ footer div.copyright div.social a.five {
   height: 500px;
   z-index: 9999;
   background-color: red;
+}
+@media only screen and (max-width: 991.98px) {
+
+}
+@media only screen and (max-width: 767.98px) {
+
+}
+@media only screen and (max-width: 480px) {
+
 }
