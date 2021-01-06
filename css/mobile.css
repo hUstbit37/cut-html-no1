@@ -68,7 +68,6 @@ best-seller {
 }
 best-seller ul {
   flex-wrap: wrap;
-  /* flex-direction: column; */
 }
 best-seller ul li {
   width: 45%;
@@ -114,7 +113,7 @@ footer div.one .discount h3 {
   font-size: 23px;
 }
 footer div.one .discount p {
-  padding: 0px 30px 15px 30px;
+  padding: 0 30px 15px 30px;
 }
 footer div.one .branding {
   width: 100%;
