@@ -27,11 +27,9 @@ header .container {
 header .container .logo {
   width: 35%;
 }
-header .container .logo a {
-  color: #3cb878;
-  font-size: 22px;
-  font-weight: bold;
-  text-transform: uppercase;
+header .container .logo a img {
+  max-height: 60px;
+  max-width: 100%;
 }
 header .container .menu {
   width: 45%;
@@ -100,15 +98,15 @@ header .container .icon .wrap span.more {
 slider {
   width: 100%;
   display: block;
-  height: 570px;
-  position: relative;
+  max-height: 570px;
+  /*position: relative;*/
 }
 slider .container-slider {
   width: 100%;
 }
 slider .slide-item {
   /* Neu slide co nhieu anh, thi anh se ngang nhau */
-  position: absolute;
+  /*position: absolute;*/
 }
 slider .slide-item img {
   max-width: 100%;
@@ -167,6 +165,7 @@ best-seller ul li > p {
 best-seller ul li:first-child {
   display: flex;
   align-items: center;
+  text-align: center;
 }
 best-seller ul li:first-child div h3 {
   text-transform: uppercase;
@@ -288,8 +287,8 @@ product-feature small {
 }
 product-feature ul {
   list-style-type: none;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -410,7 +409,7 @@ footer div.copyright div.social a {
   margin-left: 5px;
 }
 footer div.copyright div.social a.one {
-  background-position: 0px 10px;
+  background-position: 0 10px;
 }
 footer div.copyright div.social a.two {
   background-position: -60px 10px;
@@ -431,10 +430,10 @@ footer div.copyright div.social a.five {
   z-index: 9999;
   background-color: red;
 }
-@media only screen and (max-width: 991.98px) {
+@media only screen and (max-width: 992px) {
 
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 768px) {
 
 }
 @media only screen and (max-width: 480px) {

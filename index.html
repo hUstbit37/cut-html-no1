@@ -3,17 +3,23 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Document</title>
+    <title>Shop Độc</title>
     <link rel="stylesheet" href="./css/owl.carousel.min.css"/>
     <link rel="stylesheet" href="./css/owl.theme.default.min.css"/>
     <link rel="stylesheet" href="./css/style.css"/>
     <link rel="stylesheet" media="screen and (max-width: 480px)" href="./css/mobile.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+
 </head>
 <body>
+
 <header>
     <div class="container">
         <div class="logo">
-            <a href="#">Lazada Việt Nam</a>
+            <a href="#">
+                <img src="https://file.hstatic.net/200000201725/file/logo300x70_edf9c9c72acb48f791fe052257311c5c.png" alt="">
+            </a>
         </div>
         <div class="menu">
             <ul>
@@ -40,12 +46,20 @@
 
 <slider>
     <div class="container-slider">
-        <div class="slide-item">
-            <img src="./images/banner.jpg" alt=""/>
-            <h2>
-                <span>The best</span>
-                <small>Woocommerce</small>
-            </h2>
+        <div class="owl-carousel">
+            <div class="item slide-item">
+                <img src="./images/banner.jpg" alt=""/>
+                <h2>
+                    <span>The best</span>
+                    <small>Woocommerce</small>
+                </h2>
+            </div>
+            <div class="item slide-item">
+                <img src="./images/banner2.jpg" alt=""/>
+            </div>
+            <div class="item slide-item">
+                <img src="./images/banner3.jpg" alt=""/>
+            </div>
         </div>
     </div>
 </slider>
@@ -215,8 +229,8 @@
         <div class="discount">
             <h3>Get Out Special Discount</h3>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod dolor sit amet Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet, consecrated animistic elite, sed do
+                emus dolor sit amet Lorem ipsum dolor sit amet
             </p>
             <div class="form">
                 <input type="email" name="" id="" placeholder="E-mail address"/>
@@ -233,8 +247,7 @@
     </div>
     <div class="copyright">
         <p>
-            &copy; Copyright 2020 Bee all right reserved - Design by
-            Ducpro
+            &copy; Copyright 2020 Bee all right reserved - Design by Duc-pro
         </p>
         <div class="social">
             <a href="#" class="one"></a>
@@ -245,19 +258,28 @@
         </div>
     </div>
 </footer>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="./js/owl.carousel.min.js"></script>
-<!-- <script>
-  $('.owl-carousel').owlCarousel({
-      loop:true,
-     margin:10,
 
-  })
-</script> -->
 <script>
     $(() => {
         $(".more").click(function () {
             $(".menu").toggle(600)
+        });
+        $(".owl-carousel").owlCarousel({
+            loop:true,
+            margin:10,
+            autoplay:true,
+            autoplayTimeout:4000,
+            responsive:{
+                0:{
+                    items:1,
+                },
+                480:{
+                    items:1,
+                },
+                1000:{
+                    items:1,
+                }
+            }
         });
     });
 </script>

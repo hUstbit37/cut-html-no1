@@ -7,10 +7,8 @@ header .container {
 header .container .logo {
   width: 90%;
 }
-header .container div.logo a {
-  font-size: 16px;
-  text-indent: 16px;
-  display: block;
+header .container div.logo a img {
+  height: 30px;
 }
 header .container .menu {
   display: none;
@@ -37,6 +35,7 @@ header .container .menu ul li {
 header .container .icon {
   width: 10%;
   margin-right: 5px;
+  float: right;
 }
 header .container .icon .wrap {
   display: flex;
