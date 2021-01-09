@@ -1,3 +1,6 @@
+.owl-prev i, .owl-next i{
+  font-size: 10px;
+}
 header {
   height: 50px;
 }
@@ -66,13 +69,13 @@ slider .container-slider .slide-item h2 span {
 best-seller {
   margin-top: 0;
 }
-best-seller ul {
+best-seller .items {
   flex-wrap: wrap;
 }
-best-seller ul li {
+best-seller .items .item{
   width: 45%;
 }
-best-seller ul li:first-child {
+best-seller .items .item-slogan {
   width: 100%;
 }
 

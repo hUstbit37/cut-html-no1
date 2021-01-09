@@ -4,7 +4,47 @@
     box-sizing: border-box;
     /* overflow-x: hidden; */
 }
+slider button.owl-prev, button.owl-next {
+    width: 15px;
+    height: 15%;
+    position: absolute;
+    top: 40%;
+    display: block !important;
+    border:none;
+    outline: none;
+}
+slider button.owl-prev {
+    left: 2%;
+}
 
+slider button.owl-next {
+    right: 2%;
+}
+slider .owl-prev i, .owl-next i {
+    transform : scale(1,6);
+    color: #ccc;
+}
+slider .owl-dots {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 5%;
+}
+slider button.owl-dot {
+    border:none;
+    outline: none;
+}
+slider button.owl-dot span {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+}
+slider button.owl-dot.active span {
+    background: #3cb878;
+}
 body {
     font-family: "Roboto", sans-serif;
 }
@@ -16,6 +56,11 @@ body {
 
 a {
     text-decoration: none;
+}
+ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
 }
 
 /* START HEADER */
@@ -42,12 +87,6 @@ header .container .logo a img {
 
 header .container .menu {
     /*width: 50%;*/
-}
-
-header .container .menu ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
 }
 
 header .container .menu ul li {
@@ -138,12 +177,13 @@ header .container .icon .wrap span.more {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
+    text-transform: uppercase;
 }
-.search-container .search-title .search-out {
-    width: 50px;
+.search-container .search-title .search-out i.fa-times {
     cursor: pointer;
 }
 .search-container .search-form {
+    position: relative;
     text-align: center;
     width: 100%;
 }
@@ -155,6 +195,20 @@ header .container .icon .wrap span.more {
     height: 55px;
     font-size: 1.071rem;
     padding: 10px 55px 10px 20px;
+}
+.search-container .search-form .search-button-submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55px;
+    height: 55px;
+    border: none;
+    outline: none;
+    background: 0 0;
+    color: #d8d8d8;
+}
+.search-container .search-form .search-button-submit .search-icon {
+    font-weight: 900;
 }
 .overlay {
     background: rgba(0,0,0,.8);
@@ -217,78 +271,75 @@ best-seller {
     margin-top: 20px;
 }
 
-best-seller ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+best-seller .items {
     display: flex;
-
 }
 
-best-seller ul li {
+best-seller .items .item {
     width: 20%;
     margin-top: 10px;
     margin-left: 13px;
     position: relative;
 }
 
-best-seller ul li img {
+best-seller .items .item img {
     /*max-width: 250px;*/
     max-width: 100%;
 }
 
-best-seller ul li img:hover {
+best-seller .items .item img:hover {
     cursor: pointer;
     transform: scale(1.2, 1.2);
     transition: 1s;
 }
 
-best-seller ul li a {
+best-seller .items .item a {
     color: #646a72;
     font-size: 14px;
 }
 
-best-seller ul li > p {
+best-seller .items .item > p {
     color: #3cb878;
 }
 
-best-seller ul li:first-child {
+best-seller .items .item-slogan {
     display: flex;
     align-items: center;
-    text-align: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-best-seller ul li:first-child div h3 {
+best-seller .items .item-slogan h3 {
     text-transform: uppercase;
     font-size: 20px;
     display: block;
 }
 
-best-seller ul li:first-child div small {
+best-seller .items .item-slogan small {
     font-size: 14px;
     font-style: italic;
     font-weight: normal;
     color: #3cb878;
 }
 
-best-seller ul li:first-child p {
+best-seller .items .item-slogan p {
     color: #646a72;
     font-size: 13px;
     padding-top: 10px;
 }
 
-best-seller ul li:hover .action {
+best-seller .items .item:hover .action {
     display: block;
 }
 
-best-seller ul li .action {
+best-seller .items .item .action {
     position: absolute;
     top: 0;
     right: 0;
     display: none;
 }
 
-best-seller ul li .action a {
+best-seller .items .item .action a {
     display: block;
     width: 27px;
     height: 31px;
@@ -296,11 +347,11 @@ best-seller ul li .action a {
     background: url(../images/share.png) no-repeat -7px -3px;
 }
 
-best-seller ul li .action a.heart {
+best-seller .items .item .action a.heart {
     background-position: -7px;
 }
 
-best-seller ul li .action a.compare {
+best-seller .items .item .action a.compare {
     background-position: -7px -105px;
 }
 
@@ -316,12 +367,9 @@ shipping {
 }
 
 shipping ul {
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    list-style-type: none;
 }
 
 shipping ul li {
@@ -349,14 +397,10 @@ promotion {
 }
 
 promotion ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    display: flex;
+    /*display: flex;*/
 }
 
 promotion ul li {
-    width: 33.333%;
     text-align: center;
     padding: 20px;
 }
@@ -367,6 +411,7 @@ promotion ul li.active {
 
 promotion ul li img {
     max-width: 100%;
+    height: auto;
     /* width: 350px; */
 }
 
@@ -395,9 +440,6 @@ product-feature small {
 }
 
 product-feature ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -596,13 +638,13 @@ footer div.copyright div.social a.five {
     header .container .icon .wrap span.more{
         display: block;
     }
-    best-seller ul {
+    best-seller .items {
         flex-wrap: wrap;
     }
-    best-seller ul li {
+    best-seller .items .item {
         width: 23%;
     }
-    best-seller ul li:first-child {
+    best-seller .items .item-slogan {
         width: 100%;
         justify-content: center;
     }
